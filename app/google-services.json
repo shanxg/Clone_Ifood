@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "167831568786",
+    "firebase_url": "https://clone-ifood-387b3-default-rtdb.firebaseio.com",
+    "project_id": "clone-ifood-387b3",
+    "storage_bucket": "clone-ifood-387b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167831568786:android:434c664133d942e9bd414b",
+        "android_client_info": {
+          "package_name": "com.lucasrivaldo.cloneifood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167831568786-tpm721mjtha450a4fgkcikroc878rdcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lucasrivaldo.cloneifood",
+            "certificate_hash": "008010561a79aa46ca3eec4f3221d6f494d3cf1a"
+          }
+        },
+        {
+          "client_id": "167831568786-h5j8qhdoi7e6i66vj0phaqsrcn5lo1tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6eJSSiaGZVeJfptSBNNxR-BMMZo4g2To"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167831568786-h5j8qhdoi7e6i66vj0phaqsrcn5lo1tq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.lucasrivaldo.cloneifood">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -8,8 +13,38 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".activity.OrderActivity"></activity>
+        <activity
+            android:name=".activity.MyCartActivity"
+            android:label="@string/text_label_mycart_activity" />
+        <activity
+            android:name=".activity.RestaurantActivity"
+            android:label="@string/title_activity_restaurant"
+            android:parentActivityName=".activity.ClientHomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lucasrivaldo.cloneifood.activity.ClientHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AddProductActivity"
+            android:label="@string/title_activity_add_product"
+            android:parentActivityName=".activity.CompanyHomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lucasrivaldo.cloneifood.activity.CompanyHomeActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SettingsClientActivity"
+            android:label="@string/text_label_settings" />
+        <activity
+            android:name=".activity.SettingsCompanyActivity"
+            android:label="@string/text_label_settings" />
+        <activity android:name=".activity.CompanyHomeActivity" />
+        <activity android:name=".activity.ClientHomeActivity" />
+        <activity android:name=".activity.AuthenticationActivity" />
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

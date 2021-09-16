@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">(Clone) Ifood</string>
+    <string name="text_access">Access</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_sign_in">Sign in</string>
+    <string name="text_register">Register</string>
+    <string name="text_reg_complete">Registration successful</string>
+    <string name="text_sign_complete">Login successful</string>
+    <string name="text_menu_new_product">New product</string>
+    <string name="text_menu_settings">Settings</string>
+    <string name="text_menu_sign_out">Sign out</string>
+    <string name="text_menu_search">Search</string>
+    <string name="title_activity_add_product">New Product</string>
+    <string name="text_announce_price">R$ 0,00</string>
+    <string name="text_delivery_time">Delivery time</string>
+    <string name="text_announce_category">Category</string>
+    <string name="text_label_settings">Settings</string>
+    <string name="text_img_required">Click on the picture and select an image for your product.</string>
+    <string name="text_announce_name">Name</string>
+    <string name="text_updating_prof">Updating profile...</string>
+    <string name="text_description">Description</string>
+    <string name="text_btn_save_product">Save Product</string>
+    <string name="text_btn_update_prof">Update Profile</string>
+    <string name="text_adding_product">Saving product</string>
+    <string name="text_user_address">Address</string>
+    <string name="text_edit_user_name">Edit Name</string>
+    <string name="text_edit_user_address">Edit Address</string>
+    <string name="text_deliv_time">30 - 45min</string>
+    <string name="title_activity_restaurant">Restaurant</string>
+    <string name="text_zero">0</string>
+    <string name="text_static_total">TOTAL</string>
+    <string name="text_static_items_qt">Items Qt.</string>
+    <string name="text_static_welcome">Welcome,</string>
+    <string name="text_user_name">Name Lastname</string>
+    <string name="text_restaurant_name">Restaurant Name</string>
+    <string name="text_label_mycart_activity">My Cart</string>
+    <string name="text_menu_my_orders">My Orders</string>
+    <string name="text_menu_orders">Orders</string>
+    <string name="text_status">Status</string>
+    <string name="text_stat_deliv_tax">Delivery tax</string>
+
 </resources>

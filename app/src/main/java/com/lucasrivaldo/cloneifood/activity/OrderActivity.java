@@ -101,7 +101,7 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                             finish();
             });
 
-            mButtonUpdateStatus.setText("finalize");
+            mButtonUpdateStatus.setText(getResources().getString(R.string.txt_stat_finalize));
             setOrderStatusText(FINALIZED);
 
         }else {
@@ -118,10 +118,13 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
         String status = mCurrentCart.getOrderStatus();
 
         if (status.equals(PENDING))
-            mButtonUpdateStatus.setText("CONFIRM");
+            mButtonUpdateStatus.setText(getResources().getString(R.string.txt_stat_confirm_order));
         else if (status.equals(CONFIRMED))
-            mButtonUpdateStatus.setText("ORDER READY");
-
+            mButtonUpdateStatus.setText(getResources().getString(R.string.txt_stat_order_ready));
+        else if (status.equals(READY))
+            mButtonUpdateStatus.setText(getResources().getString(R.string.txt_stat_waiting_client));
+        else
+            mButtonUpdateStatus.setText(FINALIZED);
     }
 
     private void setRecyclerOrderList() {
@@ -157,7 +160,9 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
 
                 DialogInterface.OnCancelListener cancelListener = dialogInterface -> {
                     mCurrentCart.setOrderStatus(CANCELLED);
-                    if(mCurrentCart.cancel()) { finish(); }
+                    if (mCurrentCart.update(UserFirebase.getCurrentUserID()))
+                        if(mCurrentCart.cancel())
+                            finish();
                 };
 
 
@@ -171,11 +176,9 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
                 mCurrentCart.setOrderStatus(READY);
                 status = READY;
             }else if (status.equals(READY)){
-                mButtonUpdateStatus.setText(READY);
                 mButtonUpdateStatus.setEnabled(false);
                 mButtonUpdateStatus.setClickable(false);
             }else {
-                mButtonUpdateStatus.setText(FINALIZED);
                 mButtonUpdateStatus.setEnabled(false);
                 mButtonUpdateStatus.setClickable(false);
             }
@@ -184,8 +187,8 @@ public class OrderActivity extends AppCompatActivity implements View.OnClickList
             if (!status.equals(CONFIRMED)) {
                 setOrderStatusText(status);
 
-                mCurrentCart.update(UserFirebase.getCurrentUserID());
-                setBtnUpdateStatus();
+                if (mCurrentCart.update(UserFirebase.getCurrentUserID()))
+                    setBtnUpdateStatus();
             }
         }
     }

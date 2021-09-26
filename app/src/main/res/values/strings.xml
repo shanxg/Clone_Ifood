@@ -39,5 +39,9 @@
     <string name="text_menu_orders">Orders</string>
     <string name="text_status">Status</string>
     <string name="text_stat_deliv_tax">Delivery tax</string>
+    <string name="txt_stat_waiting_client">WAITING CLIENT RECEIVEMENT</string>
+    <string name="txt_stat_order_ready">ORDER READY</string>
+    <string name="txt_stat_confirm_order">CONFIRM</string>
+    <string name="txt_stat_finalize">finalize</string>
 
 </resources>

@@ -44,6 +44,8 @@ import java.util.List;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.COMPANY;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.PRODUCTS;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.REQUESTS;
+import static com.lucasrivaldo.cloneifood.helper.IfoodHelper.CANCELLED;
+import static com.lucasrivaldo.cloneifood.helper.IfoodHelper.FINALIZED;
 import static com.lucasrivaldo.cloneifood.helper.IfoodHelper.PENDING;
 
 public class CompanyHomeActivity extends AppCompatActivity
@@ -330,6 +332,13 @@ public class CompanyHomeActivity extends AppCompatActivity
                                     }
                                 }
                             }
+
+                            if (restCart.getOrderStatus().equals(FINALIZED)
+                                    || restCart.getOrderStatus().equals(CANCELLED)){
+                                if (CartUtil.removeRef(restCart.getOrderId()))
+                                    CartUtil.getOrdersList().remove(restCart);
+                            }
+
                             notifyOrdersAdapter();
                         }
                     }
@@ -362,8 +371,6 @@ public class CompanyHomeActivity extends AppCompatActivity
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {}
                 };
-
-                setOrdersListener(true);
             }
 
 
@@ -378,6 +385,8 @@ public class CompanyHomeActivity extends AppCompatActivity
             } else {
                 UserFirebase.getMyOrdersData(false, mRefsListener);
             }
+
+            setOrdersListener(true);
         });
     }
 

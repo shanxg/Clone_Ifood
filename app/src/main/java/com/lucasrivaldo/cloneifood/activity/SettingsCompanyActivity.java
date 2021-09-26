@@ -287,6 +287,7 @@ public class SettingsCompanyActivity extends AppCompatActivity
         if (!validateAnnouncementData())
             return false;
         else {
+            mDialog.dismiss();
             finish();
             return true;
         }

@@ -15,6 +15,7 @@ import com.lucasrivaldo.cloneifood.helper.IfoodHelper;
 import com.lucasrivaldo.cloneifood.model.Product;
 import com.lucasrivaldo.cloneifood.model.cart.CartHelper;
 import com.lucasrivaldo.cloneifood.model.cart.CartRestaurant;
+import com.lucasrivaldo.cloneifood.model.cart.CartUtil;
 
 import java.util.List;
 

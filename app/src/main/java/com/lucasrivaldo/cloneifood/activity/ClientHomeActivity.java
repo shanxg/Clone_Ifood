@@ -45,6 +45,8 @@ import java.util.List;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.COMPANY;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.QUERY_NAME;
 import static com.lucasrivaldo.cloneifood.config.ConfigurateFirebase.USERS;
+import static com.lucasrivaldo.cloneifood.helper.IfoodHelper.CANCELLED;
+import static com.lucasrivaldo.cloneifood.helper.IfoodHelper.FINALIZED;
 
 public class ClientHomeActivity extends AppCompatActivity {
 
@@ -300,6 +302,12 @@ public class ClientHomeActivity extends AppCompatActivity {
                                         CartUtil.getOrdersList().add(restCart);
                                     }
                                 }
+                            }
+
+                            if (restCart.getOrderStatus().equals(FINALIZED)
+                                    || restCart.getOrderStatus().equals(CANCELLED)){
+                                if (CartUtil.removeRef(restCart.getOrderId()))
+                                    CartUtil.getOrdersList().remove(restCart);
                             }
 
                             notifyOrdersAdapter();

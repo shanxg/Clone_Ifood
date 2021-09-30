@@ -251,7 +251,7 @@ public class ClientHomeActivity extends AppCompatActivity {
                                 mTextUserName.setText(mLoggedUser.getName());
                                 getMyOrders();
                             }else {
-                                throwToast("First set restaurant data", false);
+                                throwToast("First set your address", false);
                                 startSettingsActivity();
                             }
                         }

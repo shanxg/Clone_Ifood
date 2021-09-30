@@ -11,7 +11,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -440,7 +439,7 @@ public class CompanyHomeActivity extends AppCompatActivity
             throwToast("CANCELLED", false);
             mAdapterProducts.notifyDataSetChanged();
         };
-        AlertDialogUtil.deleteTransactionAlert(this, positiveButton, negativeButton);
+        AlertDialogUtil.deleteProductAlert(this, positiveButton, negativeButton);
     }
 
     /** ###############################  ACTIVITY LIFE-CYCLE  ################################ **/

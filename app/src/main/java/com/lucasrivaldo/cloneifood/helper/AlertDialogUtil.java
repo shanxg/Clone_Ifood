@@ -25,14 +25,14 @@ public class AlertDialogUtil {
         void returnFilterData(String text, String requestCode);
     }
 
-    public static void deleteTransactionAlert(Context context,
-                                       DialogInterface.OnClickListener posiBtn,
-                                       DialogInterface.OnClickListener negBtn){
+    public static void deleteProductAlert(Context context,
+                                          DialogInterface.OnClickListener posiBtn,
+                                          DialogInterface.OnClickListener negBtn){
 
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
 
-        alertDialog.setTitle("Delete transaction:");
-        alertDialog.setMessage("Are you sure, you want to delete this transaction?");
+        alertDialog.setTitle("Delete product:");
+        alertDialog.setMessage("Are you sure, you want to delete this product?");
         alertDialog.setCancelable(false);
 
         alertDialog.setPositiveButton("YES", posiBtn);

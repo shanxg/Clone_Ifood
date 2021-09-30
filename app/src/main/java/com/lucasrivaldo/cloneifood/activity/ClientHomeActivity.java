@@ -215,10 +215,7 @@ public class ClientHomeActivity extends AppCompatActivity {
                 break;
 
             case R.id.menu_settings:
-
-                Intent settingsIntent = new Intent(this, SettingsClientActivity.class);
-                settingsIntent.putExtra("bundle", mLoggedUser);
-                startActivity(settingsIntent);
+                startSettingsActivity();
                 break;
 
             case R.id.menu_sign_out:
@@ -245,14 +242,18 @@ public class ClientHomeActivity extends AppCompatActivity {
                     if (snapshot.exists()) {
                         mLoggedUser = snapshot.getValue(User.class);
                         if (mLoggedUser != null) {
+                            if  (mLoggedUser.getAddress()!=null) {
+                                if (!hasBundle) {
+                                    preLoad();
+                                    loadInterface();
+                                }
 
-                            if (!hasBundle) {
-                                preLoad();
-                                loadInterface();
+                                mTextUserName.setText(mLoggedUser.getName());
+                                getMyOrders();
+                            }else {
+                                throwToast("First set restaurant data", false);
+                                startSettingsActivity();
                             }
-
-                            mTextUserName.setText(mLoggedUser.getName());
-                            getMyOrders();
                         }
                     }
                 }
@@ -262,6 +263,12 @@ public class ClientHomeActivity extends AppCompatActivity {
                 }
             });
         });
+    }
+
+    private void startSettingsActivity() {
+        Intent settingsIntent = new Intent(this, SettingsClientActivity.class);
+        settingsIntent.putExtra("bundle", mLoggedUser);
+        startActivity(settingsIntent);
     }
 
     public void getMyOrders() {

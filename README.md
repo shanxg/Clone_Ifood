@@ -29,7 +29,7 @@
   
   # Demonstration
   > ## <div align="center"> *Register* </div> 
-  > ### Register User
+  > ### <div align="start">Register User</div>
   > <br> 
   >
   > 
@@ -38,7 +38,7 @@
   
   ----------------------------------
 
-  > ### Register Company
+  > ### <div align="start">Register Company</div>
   > <br> 
   >
   >
@@ -49,7 +49,7 @@
   
   
   > ## <div align="center"> *Login* </div> 
-  > ### User Login
+  > ### <div align="start">User Login</div>
   > <br> 
   >
   > 
@@ -58,7 +58,7 @@
   
   --------------------------------
   
-  > ### Company Login
+  > ### <div align="start">Company Login</div>
   > <br> 
   >
   > 

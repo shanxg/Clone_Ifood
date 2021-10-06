@@ -12,7 +12,8 @@
 > - ## Demonstration 
 >   - [Register](https://github.com/shanxg/Clone_Ifood#-register-)
 >       - [Register User](https://github.com/shanxg/Clone_Ifood#register-user)
->       - [Register Company](https://github.com/shanxg/Clone_Ifood#register-company)
+>         - [User Settings](https://github.com/shanxg/Clone_Ifood#user-settings)
+>       - [Register Company & Company Settings](https://github.com/shanxg/Clone_Ifood#register-company)
 >   - [Login](https://github.com/shanxg/Clone_Ifood#-login-)
 >       - [User Login](https://github.com/shanxg/Clone_Ifood#user-login)
 >       - [Company Login](https://github.com/shanxg/Clone_Ifood#company-login)

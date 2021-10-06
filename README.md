@@ -10,18 +10,18 @@
 >> <br />
 > 
 > - ## Demonstration 
->   - [Register]()
->       - [Register User]()
->       - [Register Company]()
->   - [Login]()
->       - [User Login]()
->       - [Company Login]()
->   - [Add New Product]()
->   - [Delete Product]()
->   - [Shopping Cart]()
->   - [Updating Order Status]()
->   - [Cancelling Order]()
->   - ### [Full video demonstration]()
+>   - [Register](https://github.com/shanxg/Clone_Ifood#-register-)
+>       - [Register User](https://github.com/shanxg/Clone_Ifood#register-user)
+>       - [Register Company](https://github.com/shanxg/Clone_Ifood#register-company)
+>   - [Login](https://github.com/shanxg/Clone_Ifood#-login-)
+>       - [User Login](https://github.com/shanxg/Clone_Ifood#user-login)
+>       - [Company Login](https://github.com/shanxg/Clone_Ifood#company-login)
+>   - [Add New Product](https://github.com/shanxg/Clone_Ifood#-add-new-product-)
+>   - [Delete Product](https://github.com/shanxg/Clone_Ifood#-delete-product-)
+>   - [Shopping Cart](https://github.com/shanxg/Clone_Ifood#-shopping-cart-)
+>   - [Updating Order Status](https://github.com/shanxg/Clone_Ifood#-updating-order-status-)
+>   - [Cancelling Order](https://github.com/shanxg/Clone_Ifood#-cancelling-order-)
+>   - ### [Full video demonstration](https://github.com/shanxg/Clone_Ifood#check-demonstration-videos)
 >   
 >   <br>
 
@@ -120,7 +120,7 @@
   
 # Check demonstration videos
   
-  <video src="https://user-images.githubusercontent.com/63316622/136107328-29f9c3de-ed0b-4985-a1bf-fb02fb59908c.mp4">
+  <video src="">
   
   
 
